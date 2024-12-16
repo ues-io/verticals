@@ -1,0 +1,198 @@
+name: home
+definition:
+  components:
+    - uesio/io.viewlayout:
+        uesio.variant: demo/verticals.page
+        header:
+          - uesio/core.view:
+              view: demo/verticals.header
+              uesio.styleTokens:
+                root: []
+        content:
+          - uesio/sitekit.section_hero:
+              title: "Empowering Businesses Across Key Verticals"
+              subtitle: "Streamlined solutions for Finance, Sales, Marketing, and Manufacturing"
+              actions:
+                - uesio/io.button:
+                    uesio.variant: uesio/sitekit.primary_dark
+                    text: Book a demo
+                    signals:
+                      - signal: route/REDIRECT
+                        newtab: true
+                        path: https://meetings.hubspot.com/mark2527
+                    icon: call_made
+                    iconPlacement: end
+                    uesio.styleTokens:
+                      root:
+                        - shadow-2xl
+                        - hover:scale-125
+          - uesio/io.box:
+              components:
+                - uesio/sitekit.section_feature:
+                    title: Comprehensive Solutions
+                    subtitle: Verticals Covered
+                    description: ues.io offers tailored solutions for Finance, Sales, Marketing, and Manufacturing verticals, ensuring your business needs are met across all critical areas.
+                    image: ""
+                - uesio/io.box:
+                    components:
+                      - uesio/io.group:
+                          columnGap: 10px
+                          components:
+                            - uesio/io.button:
+                                text: Finance
+                                icon: monetization_on
+                                uesio.variant: uesio/io.default
+                                iconPlacement: start
+                                uesio.styleTokens:
+                                  root:
+                                    - text-xl
+                                    - hover:scale-125
+                                signals:
+                                  - signal: route/REDIRECT
+                                    newtab: true
+                                    path: https://demo-kyc-prod.ues.io/home
+                            - uesio/io.button:
+                                text: Sales
+                                icon: point_of_sale
+                                uesio.variant: uesio/io.default
+                                iconPlacement: start
+                                uesio.styleTokens:
+                                  root:
+                                    - text-xl
+                                    - hover:scale-125
+                                signals:
+                                  - signal: route/REDIRECT
+                                    newtab: true
+                                    path: https://crm.ues.io/home
+                            - uesio/io.button:
+                                text: Marketing
+                                icon: bookmarks
+                                uesio.variant: uesio/io.default
+                                iconPlacement: start
+                                uesio.styleTokens:
+                                  root:
+                                    - text-xl
+                                    - hover:scale-125
+                                signals:
+                                  - signal: route/REDIRECT
+                                    newtab: true
+                                    path: https://demo-blog-prod.ues.io/home
+                            - uesio/io.button:
+                                text: Manufacturing
+                                icon: factory
+                                uesio.variant: uesio/io.default
+                                iconPlacement: start
+                                uesio.styleTokens:
+                                  root:
+                                    - text-xl
+                                    - hover:scale-125
+                                signals:
+                                  - signal: route/REDIRECT
+                                    newtab: true
+                                    path: https://demo-cpq-prod.ues.io/home
+                          alignItems: center
+                          justifyContent: space-evenly
+                          uesio.styleTokens:
+                            root:
+                              - pl-2
+                              - pr-2
+                    uesio.variant: uesio/sitekit.feature_wrapper_large
+                - uesio/sitekit.section_feature:
+                    title: Streamlined Workflows
+                    subtitle: Efficiency Boost
+                    description: Our platform integrates seamlessly with your existing systems, optimizing and automating your business processes for maximum productivity.
+                - uesio/sitekit.section_feature:
+                    title: Actionable Insights
+                    subtitle: Data-Driven Decisions
+                    description: Leverage real-time analytics and reporting to make informed, data-driven decisions that drive your business forward.
+          - uesio/sitekit.section_testimonial:
+              quote: ues.io's manufacturing solutions have transformed our operations. We've improved efficiency, b2b services and increased production.
+              name: Matti Morandi
+              title: Plant Owner, Storenfabrik LLC
+              avatar: demo/verticals.morandi
+          - uesio/sitekit.section:
+              innerVariant: uesio/sitekit.section_inner_content_three_column
+              uesio.styleTokens:
+                root:
+                  - bg-white/80
+              content:
+                - uesio/sitekit.testimonial:
+                    quote: ues.io is a game-changer for finance teams. The platform's robust functionality and speed transforms the way decisions are made
+                    name: Raymond Gerber
+                    title: Distinguished Product XM Scientist
+                    avatar: demo/verticals.gerber
+                - uesio/sitekit.testimonial:
+                    quote: Sales teams love the intuitive lead management and pipeline visualization features in ues.io CRM. It's helped close more deals than ever before.
+                    name: Thomas Wieberneit
+                    title: Co-Founder, CEO, Principal Co-Founder, CEO, Principal aheadCRM
+                    avatar: demo/verticals.thomas
+                - uesio/sitekit.testimonial:
+                    quote: ues.io's no-code/pro-code approach to application building is a game changer for enterprises that need security, scale and reliability.
+                    name: Dr. Setrag Khoshafian
+                    title: CEO, Principal, Chief Scientist Khosh
+                    avatar: demo/verticals.setrag
+        footer:
+          - uesio/core.view:
+              view: demo/verticals.footer
+        uesio.styleTokens:
+          root: []
+          header:
+            - sticky
+            - z-10
+            - bg-white
+            - top-0
+            - mt-8
+  wires:
+    consent:
+      viewOnly: true
+      fields:
+        consent:
+          type: CHECKBOX
+          label: Consent
+      init:
+        query: false
+        create: true
+      events:
+        - type: onLoadSuccess
+          signals:
+            - signal: panel/OPEN
+              panel: panel43
+        - type: onChange
+          fields:
+            - consent
+          signals:
+            - signal: panel/CLOSE
+              panel: panel43
+  panels:
+    panel43:
+      uesio.type: uesio/io.dialog
+      components:
+        - uesio/io.box:
+            components:
+              - uesio/io.list:
+                  mode: EDIT
+                  wire: consent
+                  components:
+                    - uesio/io.text:
+                        text: We use cookies to track our traffic. We do not store your personal data or sell any of this to anyone else. You can consent to the use of cookies by closing this notice or by clicking on the consent toggle or by interacting with anything outside of this notice or by continuing to browse otherwise.
+                        element: div
+                        align: center
+                    - uesio/io.field:
+                        fieldId: consent
+                        readonly: false
+                        displayAs: TOGGLE
+            uesio.variant: uesio/sitekit.hero_wrapper
+            uesio.styleTokens:
+              root: []
+      width: ""
+      height: ""
+      title: Cookies
+      uesio.variant: uesio/io.default
+      closeOnOutsideClick: true
+      uesio.styleTokens:
+        root:
+          - h-auto
+          - w-auto
+          - max-w-full
+          - max-h-screen
+          - border-2

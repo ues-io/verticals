@@ -1,0 +1,22 @@
+name: home
+path: home
+view: home
+theme: uesio/core.default
+title: UES.IO
+tags:
+  - type: meta
+    location: head
+    name: google
+    content: finance
+  - type: meta
+    location: head
+    name: google
+    content: sales
+  - type: meta
+    location: head
+    name: google
+    content: marketing
+  - type: meta
+    location: head
+    name: google
+    content: manufacturing

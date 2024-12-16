@@ -1,0 +1,20 @@
+name: footer
+definition:
+  wires:
+  components:
+    - uesio/ga4.ga4: {}
+    - uesio/io.box:
+        components:
+          - uesio/io.text:
+              text: UESIO Inc. | All rights Reserved © | Generated with ues.io SiteKit
+              uesio.variant: uesio/sitekit.footer_note
+              align: center
+              color: white
+        uesio.styleTokens:
+          root:
+            - bg-black
+            - h-12
+            - flex
+            - p-2
+            - items-center
+            - justify-center

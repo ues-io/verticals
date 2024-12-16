@@ -1,0 +1,20 @@
+name: public
+named: {}
+views:
+  demo/verticals.footer: true
+  demo/verticals.header: true
+  demo/verticals.home: true
+collections: {}
+routes:
+  demo/verticals.home: true
+files: {}
+bots: {}
+integrationActions: {}
+allowallbots: false
+allowallcollections: false
+allowallviews: false
+allowallroutes: false
+allowallfiles: true
+allowallintegrationactions: false
+modifyallrecords: false
+viewallrecords: false

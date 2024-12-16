@@ -1,0 +1,12 @@
+name: demo/verticals
+homeRoute: demo/verticals.home
+publicProfile: demo/verticals.public
+dependencies:
+  uesio/core:
+    version: v0.0.1
+  uesio/ga4:
+    version: v0.0.1
+  uesio/io:
+    version: v0.0.1
+  uesio/sitekit:
+    version: v0.0.1

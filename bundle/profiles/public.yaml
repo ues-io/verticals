@@ -1,0 +1,4 @@
+name: public
+permissionSets:
+  - demo/verticals.public
+  - uesio/core.public

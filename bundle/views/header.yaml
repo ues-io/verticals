@@ -1,0 +1,79 @@
+name: header
+definition:
+  wires:
+  components:
+    - uesio/sitekit.header:
+        uesio.styleTokens:
+          root:
+            - bg-white/90
+            - border-b-2
+            - pb-2
+        sticky: true
+        logo:
+          - uesio/io.image:
+              file: demo/verticals.logo
+              filepath: ""
+              signals: []
+              uesio.styleTokens:
+                root: []
+              height: 44
+              width: 34
+              loading: eager
+              uesio.variant: ""
+        right:
+          - uesio/io.group:
+              components:
+                - uesio/io.button:
+                    uesio.variant: uesio/sitekit.secondary_dark
+                    text: Finance
+                    signals:
+                      - signal: route/REDIRECT
+                        newtab: true
+                        path: https://demo-kyc-prod.ues.io/home
+                    icon: ""
+                    uesio.styleTokens:
+                      root:
+                        - hover:shadow-md
+                        - font-light
+                - uesio/io.button:
+                    uesio.variant: uesio/sitekit.secondary_dark
+                    text: Sales
+                    signals:
+                      - signal: route/REDIRECT
+                        newtab: true
+                        path: https://crm.ues.io/home
+                    icon: ""
+                    uesio.styleTokens:
+                      root:
+                        - hover:shadow-md
+                        - font-light
+                - uesio/io.button:
+                    uesio.variant: uesio/sitekit.secondary_dark
+                    text: Marketing
+                    signals:
+                      - signal: route/REDIRECT
+                        newtab: true
+                        path: https://demo-blog-prod.ues.io/home
+                    icon: ""
+                    uesio.styleTokens:
+                      root:
+                        - hover:shadow-md
+                        - font-light
+                - uesio/io.button:
+                    uesio.variant: uesio/sitekit.secondary_dark
+                    text: Manufacturing
+                    signals:
+                      - signal: route/REDIRECT
+                        newtab: true
+                        path: https://demo-cpq-prod.ues.io/home
+                    icon: ""
+                    uesio.styleTokens:
+                      root:
+                        - hover:shadow-md
+                        - font-light
+              alignItems: center
+              justifyContent: space-evenly
+              uesio.variant: uesio/io.default
+              columnGap: "2"
+              uesio.styleTokens:
+                root: []

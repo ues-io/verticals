@@ -106,10 +106,10 @@ definition:
                     subtitle: Data-Driven Decisions
                     description: Leverage real-time analytics and reporting to make informed, data-driven decisions that drive your business forward.
           - uesio/sitekit.section_testimonial:
-              quote: ues.io's manufacturing solutions have transformed our operations. We've improved efficiency, b2b services and increased production.
-              name: Matti Morandi
-              title: Plant Owner, Storenfabrik LLC
-              avatar: demo/verticals.morandi
+              quote: I am drawn to innovative environments where I can help foster organizational growth through ideating solutions to complex challenges, creating new working paradigms and frameworks, organizing systems, and modeling and analyzing customer value and adoption data.
+              name: Kris Kieper
+              title: Independent Advisory Consultant - Owner and Founder
+              avatar: demo/verticals.kriskieper
           - uesio/sitekit.section:
               innerVariant: uesio/sitekit.section_inner_content_three_column
               uesio.styleTokens:

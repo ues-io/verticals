@@ -105,32 +105,56 @@ definition:
                     title: Actionable Insights
                     subtitle: Data-Driven Decisions
                     description: Leverage real-time analytics and reporting to make informed, data-driven decisions that drive your business forward.
-          - uesio/sitekit.section_testimonial:
-              quote: I am drawn to innovative environments where I can help foster organizational growth through ideating solutions to complex challenges, creating new working paradigms and frameworks, organizing systems, and modeling and analyzing customer value and adoption data.
-              name: Kris Kieper
-              title: Independent Advisory Consultant - Owner and Founder
-              avatar: demo/verticals.kriskieper
+          - uesio/io.box:
+              components:
+                - uesio/sitekit.section_testimonial:
+                    quote: I am drawn to ues.io's innovative environments where I can help foster organizational growth through ideating solutions to complex challenges, creating new working paradigms and frameworks, organizing systems, and modeling and analyzing customer value and adoption data.
+                    name: Kris Kieper
+                    title: Independent Advisory Consultant - Owner and Founder
+                    avatar: demo/verticals.kriskieper
+              signals:
+                - signal: route/REDIRECT
+                  path: https://www.linkedin.com/in/kriskieper/
+                  newtab: true
           - uesio/sitekit.section:
               innerVariant: uesio/sitekit.section_inner_content_three_column
               uesio.styleTokens:
                 root:
                   - bg-white/80
               content:
-                - uesio/sitekit.testimonial:
-                    quote: ues.io is a game-changer for finance teams. The platform's robust functionality and speed transforms the way decisions are made
-                    name: Raymond Gerber
-                    title: Distinguished Product XM Scientist
-                    avatar: demo/verticals.gerber
-                - uesio/sitekit.testimonial:
-                    quote: Sales teams love the intuitive lead management and pipeline visualization features in ues.io CRM. It's helped close more deals than ever before.
-                    name: Thomas Wieberneit
-                    title: Co-Founder, CEO, Principal Co-Founder, CEO, Principal aheadCRM
-                    avatar: demo/verticals.thomas
-                - uesio/sitekit.testimonial:
-                    quote: ues.io's no-code/pro-code approach to application building is a game changer for enterprises that need security, scale and reliability.
-                    name: Dr. Setrag Khoshafian
-                    title: CEO, Principal, Chief Scientist Khosh
-                    avatar: demo/verticals.setrag
+                - uesio/io.box:
+                    components:
+                      - uesio/sitekit.testimonial:
+                          quote: ues.io is a game-changer for finance teams. The platform's robust functionality and speed transforms the way decisions are made
+                          name: Raymond Gerber
+                          title: Distinguished Product XM Scientist
+                          avatar: demo/verticals.gerber
+                    signals:
+                      - signal: route/REDIRECT
+                        path: https://www.linkedin.com/in/golfergerbs/
+                        newtab: true
+                - uesio/io.box:
+                    components:
+                      - uesio/sitekit.testimonial:
+                          quote: Sales teams love the intuitive lead management and pipeline visualization features in ues.io CRM. It's helped close more deals than ever before.
+                          name: Thomas Wieberneit
+                          title: Co-Founder, CEO, Principal
+                          avatar: demo/verticals.thomas
+                    signals:
+                      - signal: route/REDIRECT
+                        path: https://www.linkedin.com/in/thomaswieberneit/
+                        newtab: true
+                - uesio/io.box:
+                    components:
+                      - uesio/sitekit.testimonial:
+                          quote: ues.io's no-code/pro-code approach to application building is a game changer for enterprises that need security, scale and reliability.
+                          name: Dr. Setrag Khoshafian
+                          title: CEO, Principal, Chief Scientist Khosh
+                          avatar: demo/verticals.setrag
+                    signals:
+                      - signal: route/REDIRECT
+                        path: https://www.linkedin.com/in/setrag/
+                        newtab: true
         footer:
           - uesio/core.view:
               view: demo/verticals.footer

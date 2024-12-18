@@ -2,78 +2,160 @@ name: header
 definition:
   wires:
   components:
-    - uesio/sitekit.header:
-        uesio.styleTokens:
-          root:
-            - bg-white/90
-            - border-b-2
-            - pb-2
-        sticky: true
-        logo:
-          - uesio/io.image:
-              file: demo/verticals.logo
-              filepath: ""
-              signals: []
+    - uesio/io.box:
+        components:
+          - uesio/sitekit.header:
               uesio.styleTokens:
-                root: []
-              height: 44
-              width: 34
-              loading: eager
-              uesio.variant: ""
-        right:
-          - uesio/io.group:
-              components:
-                - uesio/io.button:
-                    uesio.variant: uesio/sitekit.secondary_dark
-                    text: Finance
-                    signals:
-                      - signal: route/REDIRECT
-                        newtab: true
-                        path: https://demo-kyc-prod.ues.io/home
-                    icon: ""
+                root:
+                  - from-indigo-700
+                  - to-violet-600
+                  - bg-gradient-to-br
+                  - "[background-size:100%_500%]"
+                  - backdrop-blur
+                  - pb-2
+              sticky: true
+              menuSignals:
+                - signal: panel/TOGGLE
+                  panel: navmenu
+              logo:
+                - uesio/io.box:
+                    components:
+                      - uesio/io.image:
+                          file: uesio/core.logowhite
+                          filepath: ""
+                          signals:
+                            - signal: route/REDIRECT
+                              path: https://ues.io
+                              newtab: true
+                          uesio.styleTokens:
+                            root: []
+                          height: 44
+                          width: 34
+                          loading: eager
+                          uesio.variant: ""
                     uesio.styleTokens:
-                      root:
-                        - hover:shadow-md
-                        - font-light
-                - uesio/io.button:
-                    uesio.variant: uesio/sitekit.secondary_dark
-                    text: Sales
-                    signals:
-                      - signal: route/REDIRECT
-                        newtab: true
-                        path: https://crm.ues.io/home
-                    icon: ""
+                      root: []
+              right:
+                - uesio/io.box:
+                    components:
+                      - uesio/io.group:
+                          components:
+                            - uesio/io.button:
+                                uesio.variant: uesio/sitekit.secondary_dark
+                                text: Finance
+                                signals:
+                                  - signal: route/REDIRECT
+                                    newtab: true
+                                    path: https://demo-kyc-prod.ues.io/home
+                                icon: ""
+                                uesio.styleTokens:
+                                  root:
+                                    - hover:shadow-md
+                                    - font-light
+                                    - hover:bg-white
+                                  label:
+                                    - text-white
+                                    - hover:text-black
+                            - uesio/io.button:
+                                uesio.variant: uesio/sitekit.secondary_dark
+                                text: Sales
+                                signals:
+                                  - signal: route/REDIRECT
+                                    newtab: true
+                                    path: https://crm.ues.io/home
+                                icon: ""
+                                uesio.styleTokens:
+                                  root:
+                                    - hover:shadow-md
+                                    - font-light
+                                    - text-white
+                                    - hover:bg-white
+                                  label:
+                                    - hover:text-black
+                            - uesio/io.button:
+                                uesio.variant: uesio/sitekit.secondary_dark
+                                text: Marketing
+                                signals:
+                                  - signal: route/REDIRECT
+                                    newtab: true
+                                    path: https://demo-blog-prod.ues.io/home
+                                icon: ""
+                                uesio.styleTokens:
+                                  root:
+                                    - hover:shadow-md
+                                    - font-light
+                                    - text-white
+                                    - hover:bg-white
+                                  label:
+                                    - hover:text-black
+                            - uesio/io.button:
+                                uesio.variant: uesio/sitekit.secondary_dark
+                                text: Manufacturing
+                                signals:
+                                  - signal: route/REDIRECT
+                                    newtab: true
+                                    path: https://demo-cpq-prod.ues.io/home
+                                icon: ""
+                                uesio.styleTokens:
+                                  root:
+                                    - hover:shadow-md
+                                    - font-light
+                                    - text-white
+                                    - hover:bg-white
+                                  label:
+                                    - hover:text-black
+                          alignItems: center
+                          justifyContent: space-evenly
+                          uesio.variant: uesio/io.default
+                          columnGap: "2"
+                          uesio.styleTokens:
+                            root: []
                     uesio.styleTokens:
-                      root:
-                        - hover:shadow-md
-                        - font-light
-                - uesio/io.button:
-                    uesio.variant: uesio/sitekit.secondary_dark
-                    text: Marketing
-                    signals:
-                      - signal: route/REDIRECT
-                        newtab: true
-                        path: https://demo-blog-prod.ues.io/home
-                    icon: ""
-                    uesio.styleTokens:
-                      root:
-                        - hover:shadow-md
-                        - font-light
-                - uesio/io.button:
-                    uesio.variant: uesio/sitekit.secondary_dark
-                    text: Manufacturing
-                    signals:
-                      - signal: route/REDIRECT
-                        newtab: true
-                        path: https://demo-cpq-prod.ues.io/home
-                    icon: ""
-                    uesio.styleTokens:
-                      root:
-                        - hover:shadow-md
-                        - font-light
-              alignItems: center
-              justifyContent: space-evenly
-              uesio.variant: uesio/io.default
-              columnGap: "2"
-              uesio.styleTokens:
-                root: []
+                      root: []
+  panels:
+    navmenu:
+      uesio.type: uesio/io.sidepanel
+      uesio.styleTokens:
+        blocker:
+          - z-20
+        icon:
+          - text-3xl
+          - text-slate-800
+          - p-6
+      components:
+        - uesio/io.group:
+            uesio.styleTokens:
+              root:
+                - grid-flow-row
+                - justify-center
+            components:
+              - uesio/io.button:
+                  uesio.variant: uesio/sitekit.primary_dark
+                  text: Finance
+                  signals:
+                    - signal: route/REDIRECT
+                      path: https://demo-kyc-prod.ues.io/home
+                      newtab: true
+              - uesio/io.button:
+                  uesio.variant: uesio/sitekit.primary_dark
+                  text: Sales
+                  signals:
+                    - signal: route/REDIRECT
+                      path: https://crm.ues.io/home
+                      newtab: true
+              - uesio/io.button:
+                  uesio.variant: uesio/sitekit.primary_dark
+                  text: Marketing
+                  signals:
+                    - signal: route/REDIRECT
+                      path: https://demo-blog-prod.ues.io/home
+                      newtab: true
+              - uesio/io.button:
+                  uesio.styleTokens:
+                    root: []
+                  uesio.variant: uesio/sitekit.primary_dark
+                  text: manufacturing
+                  signals:
+                    - signal: route/REDIRECT
+                      path: https://demo-cpq-prod.ues.io/home
+                      newtab: true

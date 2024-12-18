@@ -96,7 +96,7 @@ definition:
                             root:
                               - pl-2
                               - pr-2
-                    uesio.variant: uesio/sitekit.feature_wrapper_large
+                    uesio.variant: uesio/sitekit.section_inner_content
                 - uesio/sitekit.section_feature:
                     title: Streamlined Workflows
                     subtitle: Efficiency Boost

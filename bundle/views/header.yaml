@@ -118,6 +118,11 @@ definition:
       uesio.styleTokens:
         blocker:
           - z-20
+        inner:
+          - from-indigo-700
+          - to-violet-600
+          - bg-gradient-to-br
+          - "[background-size:100%_500%]"
         icon:
           - text-3xl
           - text-slate-800

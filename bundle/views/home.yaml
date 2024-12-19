@@ -12,6 +12,9 @@ definition:
           - uesio/sitekit.section_hero:
               title: "Empowering Businesses Across Key Verticals"
               subtitle: "Streamlined solutions for Finance, Sales, Marketing, and Manufacturing"
+              uesio.styleTokens:
+                root:
+                  - text-center
               actions:
                 - uesio/io.button:
                     uesio.variant: uesio/sitekit.primary_dark
@@ -26,13 +29,16 @@ definition:
                       root:
                         - shadow-2xl
                         - hover:scale-125
+              heroVariant: uesio/sitekit.default
           - uesio/io.box:
               components:
                 - uesio/sitekit.section_feature:
                     title: Comprehensive Solutions
                     subtitle: Verticals Covered
                     description: ues.io offers tailored solutions for Finance, Sales, Marketing, and Manufacturing verticals, ensuring your business needs are met across all critical areas.
-                    image: ""
+                    uesio.styleTokens:
+                      root:
+                        - text-center
                 - uesio/io.box:
                     components:
                       - uesio/io.group:
@@ -42,7 +48,7 @@ definition:
                                 text: Finance
                                 icon: monetization_on
                                 uesio.variant: uesio/io.default
-                                iconPlacement: start
+                                iconPlacement: ""
                                 uesio.styleTokens:
                                   root:
                                     - text-xl
@@ -55,7 +61,7 @@ definition:
                                 text: Sales
                                 icon: point_of_sale
                                 uesio.variant: uesio/io.default
-                                iconPlacement: start
+                                iconPlacement: ""
                                 uesio.styleTokens:
                                   root:
                                     - text-xl
@@ -68,7 +74,7 @@ definition:
                                 text: Marketing
                                 icon: bookmarks
                                 uesio.variant: uesio/io.default
-                                iconPlacement: start
+                                iconPlacement: ""
                                 uesio.styleTokens:
                                   root:
                                     - text-xl
@@ -81,7 +87,7 @@ definition:
                                 text: Manufacturing
                                 icon: factory
                                 uesio.variant: uesio/io.default
-                                iconPlacement: start
+                                iconPlacement: ""
                                 uesio.styleTokens:
                                   root:
                                     - text-xl
@@ -101,10 +107,16 @@ definition:
                     title: Streamlined Workflows
                     subtitle: Efficiency Boost
                     description: Our platform integrates seamlessly with your existing systems, optimizing and automating your business processes for maximum productivity.
+                    uesio.styleTokens:
+                      root:
+                        - text-center
                 - uesio/sitekit.section_feature:
                     title: Actionable Insights
                     subtitle: Data-Driven Decisions
                     description: Leverage real-time analytics and reporting to make informed, data-driven decisions that drive your business forward.
+                    uesio.styleTokens:
+                      root:
+                        - text-center
           - uesio/io.box:
               components:
                 - uesio/sitekit.section_testimonial:
@@ -166,57 +178,5 @@ definition:
             - bg-white
             - top-0
             - mt-8
-  wires:
-    consent:
-      viewOnly: true
-      fields:
-        consent:
-          type: CHECKBOX
-          label: Consent
-      init:
-        query: false
-        create: true
-      events:
-        - type: onLoadSuccess
-          signals:
-            - signal: panel/OPEN
-              panel: panel43
-        - type: onChange
-          fields:
-            - consent
-          signals:
-            - signal: panel/CLOSE
-              panel: panel43
-  panels:
-    panel43:
-      uesio.type: uesio/io.dialog
-      components:
-        - uesio/io.box:
-            components:
-              - uesio/io.list:
-                  mode: EDIT
-                  wire: consent
-                  components:
-                    - uesio/io.text:
-                        text: We use cookies to track our traffic. We do not store your personal data or sell any of this to anyone else. You can consent to the use of cookies by closing this notice or by clicking on the consent toggle or by interacting with anything outside of this notice or by continuing to browse otherwise.
-                        element: div
-                        align: center
-                    - uesio/io.field:
-                        fieldId: consent
-                        readonly: false
-                        displayAs: TOGGLE
-            uesio.variant: uesio/sitekit.hero_wrapper
-            uesio.styleTokens:
-              root: []
-      width: ""
-      height: ""
-      title: Cookies
-      uesio.variant: uesio/io.default
-      closeOnOutsideClick: true
-      uesio.styleTokens:
-        root:
-          - h-auto
-          - w-auto
-          - max-w-full
-          - max-h-screen
-          - border-2
+  wires: {}
+  panels: {}

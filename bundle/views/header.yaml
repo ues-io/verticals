@@ -135,21 +135,21 @@ definition:
                 - justify-center
             components:
               - uesio/io.button:
-                  uesio.variant: uesio/sitekit.primary_dark
+                  uesio.variant: uesio/sitekit.primary_nofill
                   text: Finance
                   signals:
                     - signal: route/REDIRECT
                       path: https://demo-kyc-prod.ues.io/home
                       newtab: true
               - uesio/io.button:
-                  uesio.variant: uesio/sitekit.primary_dark
+                  uesio.variant: uesio/sitekit.primary_nofill
                   text: Sales
                   signals:
                     - signal: route/REDIRECT
                       path: https://crm.ues.io/home
                       newtab: true
               - uesio/io.button:
-                  uesio.variant: uesio/sitekit.primary_dark
+                  uesio.variant: uesio/sitekit.primary_nofill
                   text: Marketing
                   signals:
                     - signal: route/REDIRECT
@@ -158,9 +158,19 @@ definition:
               - uesio/io.button:
                   uesio.styleTokens:
                     root: []
-                  uesio.variant: uesio/sitekit.primary_dark
+                  uesio.variant: uesio/sitekit.primary_nofill
                   text: manufacturing
                   signals:
                     - signal: route/REDIRECT
                       path: https://demo-cpq-prod.ues.io/home
                       newtab: true
+              - uesio/io.button:
+                  uesio.variant: uesio/sitekit.primary_dark
+                  text: Get Started
+                  signals:
+                    - signal: route/REDIRECT
+                      path: https://ues.io
+                      newtab: true
+                  uesio.styleTokens:
+                    root:
+                      - mt-4
